@@ -1,0 +1,37 @@
+<section>
+	<div class="page-header" id="avionik">
+		<h2>Avionik <small>Im Luftfahrzeug werden viele Avionik...</small></h2>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<h3>Avionik</h3>
+			<p>Der Betriebszweig Avionik gehört zum Hauptstandort Stadtlohn (EDLS) und wird geführt von dem Betriebsleiter und Prüfer Klasse I Herrn Mönning. Ein äusserst breites Feld von Reparaturen, Prüfungen, Ein- und Umbauten in den Elektronikanlagen von Luftfahrzeugen gehören zu den Arbeitsbereichen der Abt. Avionik.</p>
+		</div>
+		<div class="col-lg-4">
+			<img src="images/avionik/avionik_1.jpg" class="img-responsive" alt="Avionik 1">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<h3>Avionik Teil 2</h3>
+			<p>Der Betriebszweig Avionik gehört zum Hauptstandort Stadtlohn (EDLS) und wird geführt von dem Betriebsleiter und Prüfer Klasse I Herrn Mönning. Ein äusserst breites Feld von Reparaturen, Prüfungen, Ein- und Umbauten in den Elektronikanlagen von Luftfahrzeugen gehören zu den Arbeitsbereichen der Abt. Avionik.</p>
+		</div>
+		<div class="col-lg-4">
+			<img src="images/avionik/avionik_2.jpg" class="img-responsive" alt="Avionik 1">
+		</div>
+	</div>
+	
+	<hr>
+	
+	<div class="row">
+		<div class="col-lg-4" ng-repeat="section in sections">
+			<div class="panel panel-default text-center">
+				<div class="panel-body">
+					<span class="glyphicon {{section.icon}}"></span>
+					<h4>{{section.title}}</h4>
+					<p>{{section.text}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

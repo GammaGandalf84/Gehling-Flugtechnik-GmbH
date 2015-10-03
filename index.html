@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf8">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+		<link rel="stylesheet" href="css/main.css">
+		<title>Gehling Flugtechnik GmbH</title>
+	</head>
+	<!--Body-Tag-Begin -->
+	<body data-spy="scroll" data-target="#my-navbar" ng-app="gehling"><!-- #my-navbar von Zeile 15 id="my-navbar" -->
+		<!-- Navbar-Begin -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+			<div class="container" id="Startseite">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Gehling<small> Flugtechnik</small></a>
+				</div><!-- End Navbar-header -->
+				
+				<div class="collapse navbar-collapse" id="navbar-collapse"><!--Id bezogen von Zeile 18 data-target="#navbar-collpase"-->
+					<ul class="nav navbar-nav" data-offset="10000">
+						<!-- <li><a href="#Startseite">Startseite</a></li> -->
+						<li><a href="#ueber_uns">über uns</a></li>
+						<li><a href="#geschichte">Geschichte</a></li>
+						<li><a href="#avionik">Avionik</a></li>
+						<li><a href="#questions">Fragen?</a></li>
+						<li><a href="#kontakt">Kontakt</a></li>
+						<li><a href="#impressum">Impressum</a></li>
+					</ul>
+				</div>
+			</div><!--End-Container-->
+		</nav><!-- Navbar-End -->
+				
+		<!-- Jumbtron Begin -->
+		
+		<div class="jumbotron" id="top">
+			<div class="container text-center">
+				<h1>Gehling Flugtechnik GmbH</h1>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+				<div class="btn-group">
+					<a href="" class="btn btn-lg btn-info">Download Bilder</a>
+					<a href="" class="btn btn-lg btn-info">Shop</a>
+					<a href="" class="btn btn-lg btn-info">Dokumentationen</a>
+				</div>
+			</div>
+		</div>
+				
+		<div class="container" ng-controller="DieterCtrl" ng-include="'module/ueber_uns/ueber_uns.view.html'">
+			
+		</div>
+	
+		<section>
+			<div class="well">
+				<div class="container text-center">
+					<h3>Subscribe for more free Stuff</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus vero sequi est aut. Voluptate architecto placeat quod nostrum reprehenderit quae doloribus, quibusdam hic quam. Quis adipisci numquam nam eos vitae.</p>
+					<form action="" class="form-inline">
+						<div class="form-group">
+							<label for="subscription">Subscribe: </label>
+							<input type="text" class="form-control" id="subscription" placeholder="Ihr Name" ng-model="name">
+						</div>
+						<div class="form-group">
+							<label for="email">E-Mail: </label>
+							<input type="email" class="form-control" id="email_adress" placeholder="Ihre E-Mail">
+						</div>
+						<button ng-class="name ? '' : 'disabled'" type="submit" class="btn btn-info">Wir regestrieren dich, {{name}}</button>
+						<hr>
+					</form>
+				</div>
+			</div>
+		</section>
+	<!-- E-Mail mail back End -->
+	
+	<!-- Geschichte -->
+	<div class="container">
+		<section>
+			<div class="page-header" id="geschichte">
+				<h2>Geschichte <small>Von der Entstehung unsere Firma bis heute.</small></h2>
+			</div>
+			<div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="images/aircraft_1.jpg" alt="Aircraft 1">
+						<div class="carousel-caption">
+							<h3>Speed-Jet</h3>
+							<p>eines der neusten Aircrafts</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/aircraft_2.jpg" alt="Aircraft 2">
+						<div class="carousel-caption">
+							<h3>Speed-Jet</h3>
+							<p>eines der neusten Aircrafts</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/aircraft_3.jpg" alt="Aircraft 3">
+						<div class="carousel-caption">
+							<h3>Speed-Jet</h3>
+							<p>eines der neusten Aircrafts</p>
+						</div>
+					</div>
+				</div>
+				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+				</div><!-- Carousel End -->
+			</section>
+		</div>
+		
+		<!-- Avionik Part -->
+		
+		<div class="container" ng-controller="AvionikCtrl" ng-include="'./module/avionik/avionik.view.html'" >
+		</div>
+		<!-- End Avionik Part -->
+			
+		<!-- Questions Part -->
+		<div class="container">
+			<section>
+				<div class="page-header" id="questions">
+					<h2>Fragen <small>Falls Sie Fragen an uns haben...</small></h2>
+				</div>
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">
+								Question one?
+								</a>
+							</div>
+							<div id="collapse-1" class="panel-collapse collapse in"><!-- in bschreibt das er Standarmäßig geöffnet ist -->
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<a href="#collapse-2" data-toggle="collapse" data-parent="#accordion">
+									Question two?
+								</a>
+							</div>
+							<div id="collapse-2" class="panel-collapse collapse">
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<a href="#collapse-3" data-toggle="collapse" data-parent="#accordion">
+									Question three?
+								</a>
+							</div>
+							<div id="collapse-3" class="panel-collapse collapse">
+								<div class="panel-body">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- Questions Part End -->
+		
+		<!-- Kontakt -->
+		<div class="container">
+			<section>
+				<div class="page-header" id="kontakt">
+					<h2>Kontakt <small>Schreiben Sie uns eine E-Mail oder lassen Sie sich zurückrufen.</small></h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<p>Senden Sie uns eine Nachricht</p>
+						<address>
+							<strong>Gehling Flugtechnik GmbH</strong>
+							</br>Betrieb/Headquarters Stadtlohn</br>Wenningfeld 41</br>48703 Stadtlohn</br>Tel.: + 49 (0) 2563/3536</br>Fax: + 49 (0) 2563/2621</br>E-Mail: info@gehling-flugtechnik.de
+						</address>
+					</div>
+					
+					<div class="col-lg-8">
+						<form action="" class="form-horizontal">
+							<div class="form-group">
+								<label for="user-name" class="col-lg-2 control-label">Name</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="user-name" placeholder="Namen eingeben">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="user-email" class="col-lg-2 control-label">E-Mail</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="user-email" placeholder="E-Mail eingeben">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="user-url" class="col-lg-2 control-label">Website</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="user-url" placeholder="Website eingeben">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="user-message" class="col-lg-2 control-label">Nachricht</label>
+								<div class="col-lg-10">
+									<textarea name="user-message" id="user-message" class="form-control" cols="20" rows="10" placeholder="Nachricht eingeben"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-10 col-lg-offset-2">
+									<button type="submit" class="btn btn-primary">abschicken</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Kontakt Part End Tutorial on Time 1:26:50 -->
+		
+		<!-- Impressum Begin -->
+		
+		<div class="container">
+			<section>
+				<div class="page-header" id="impressum">
+					<h2>Impressum</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-5 col-lg-offset-1">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<span class="glyphicon glyphicon glyphicon-user"></span>
+								<h4>Dieter Gehling</h4>
+								<p>
+									Geschäftsführer / Managing
+									</br>
+									Vertretungsberechtigter
+									</br>
+									Handelsregister / Registration: AG Coesfeld HRB 3297
+									</br>
+									Gerichtsstand/Cour Location: Ahaus
+									</br>
+									USt.-Id.-Nr. / VAT Identification No.: DE 812492430
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<span class="glyphicon glyphicon glyphicon-user"></span>
+								<h4>Astrid Gehling</h4>
+								<p>
+									Geschäftsführerin (Camo+ GmbH) / Managing (Camo+ GmbH)
+									</br>
+									Vertretungsberechtigter
+									</br>
+									Handelsregister / Registration: AG Coesfeld HRB 11154
+									</br>
+									Gerichtsstand/Cour Location: Ahaus
+									</br>
+									USt.-Id.-Nr. / VAT Identification No.: DE 814973360
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<span class="glyphicon glyphicon glyphicon-home"></span>
+								<h4>Betrieb / Headquarters Stadtlohn</h4>
+								<p>Wenningfeld 41</br>
+								48703 Stadtlohn</br>
+								Tel.: + 49 (0) 2563/3536</br>
+								Fax: + 49 (0) 2563/2621</br>
+								E-Mail: info@gehling-flugtechnik.de</br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<span class="glyphicon glyphicon glyphicon-plane"></span>
+								<h4>Betrieb / Devision Magdeburg</h4>
+								<p>Ottersleber Chaussee 91</br>
+								39120 Magdeburg</br>
+								Tel.: + 49 (0) 391/6216216</br>
+								Fax: + 49 (0) 391/5558055</br>
+								E-Mail: magdeburg@gehling-flugtechnik.de</br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="panel panel-default text-center">
+							<div class="panel-body">
+								<span class="glyphicon glyphicon-play-circle"></span>
+								<h4>Gehling CAMO+ GmbH</h4>
+								<p>Wenningfeld 41</br>
+								48703 Stadtlohn</br>
+								Tel.: + 49 (0) 2563/3536</br>
+								Fax: + 49 (0) 2563/2621</br>
+								E-Mail: info@gehling-flugtechnik.de</br>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Impressum End  -->
+
+		<!-- Footer Begin  -->
+
+		<footer>
+			<div class="container text-center">
+				<hr>
+
+				<ul class="list-inline">
+					<li><a href="">Twitter</a></li>
+					<li><a href="">Facebook</a></li>
+					<li><a href="">Youtube</a></li>
+				</ul>
+				
+				<p>&copy; Copyright @ 2015</p>
+
+				<a href="#top">zurück nach oben</a>
+			</div>
+		</footer>
+		
+		<!-- Footer End -->
+		
+		
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/angular_foo.js"></script>
+		<script src="module/avionik/avionik.controller.js"></script>
+		<script src="module/ueber_uns/ueber_uns.controller.js"></script>
+	</body>
+</html>
